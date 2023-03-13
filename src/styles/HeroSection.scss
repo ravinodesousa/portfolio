@@ -1,0 +1,11 @@
+.hero-section{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: -1;
+    background: radial-gradient(circle, rgba(65,227,255,1) 0%, rgba(0,161,255,1) 100%);
+}

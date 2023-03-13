@@ -1,35 +1,23 @@
-import { useState } from "react";
 import "./App.scss";
-import Snowflake from "./snowflake.png";
+import AboutMe from "./components/AboutMe";
+import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import MyWork from "./components/MyWork";
+import Navbar from "./components/Navbar";
+import Resume from "./components/Resume";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-    <div className={`main1 ${darkMode ? "dark" : "light"}`}>
-      {darkMode && (
-        <div className="snow">
-          {Array.from(Array(2500).keys()).map(() => {
-            return <img className="snow-flakes" src={Snowflake} />;
-          })}
-        </div>
-      )}
-      <div className="float-end">
-        <input
-          onChange={() => {
-            setDarkMode(!darkMode);
-          }}
-          type="checkbox"
-          class="checkbox"
-          id="checkbox"
-        />
-        <label for="checkbox" class="checkbox-label">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
-          <span class="ball"></span>
-        </label>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutMe />
+      <Resume />
+      <MyWork />
+      <ContactMe />
+      <Footer />
+    </>
   );
 }
 
