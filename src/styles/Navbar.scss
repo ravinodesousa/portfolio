@@ -5,3 +5,26 @@
     width: 100vw;
     z-index: 1;
 }
+
+.nav-link{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 8px 13px;
+    line-height: 32px;
+    text-decoration: none;
+    text-align: left;
+    color: #fff !important; 
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-link.active{
+    // color:#fe6928 !important;
+    color:#ffc107 !important;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+}

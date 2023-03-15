@@ -1,9 +1,17 @@
 import React from "react";
 import "../styles/Navbar.scss";
+import useSticky from "../helpers/useSticky";
 
 export default function Navbar() {
+  const { sticky, stickyRef } = useSticky();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav
+      ref={stickyRef}
+      className={`navbar navbar-expand-lg navbar-dark  ${
+        sticky ? "sticky navbar-light bg-dark" : ""
+      }`}
+    >
       <div className="container">
         <button
           className="navbar-toggler"
@@ -25,12 +33,22 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Features
+                About
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Pricing
+                Resume
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Works
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Contact
               </a>
             </li>
           </ul>
